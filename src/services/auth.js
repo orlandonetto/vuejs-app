@@ -1,4 +1,4 @@
-import { httpRequest } from "./request";
+import { httpRequest } from "./index";
 
 export function signIn(payload) {
   return httpRequest("post", "/endpoint", payload);
