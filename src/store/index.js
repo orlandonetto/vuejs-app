@@ -58,9 +58,6 @@ export default new Vuex.Store({
       // local storage
       localStorage.removeItem("token");
       localStorage.removeItem("authenticated");
-
-      // redirect
-      router.push({ path: "/auth" });
     },
   },
 

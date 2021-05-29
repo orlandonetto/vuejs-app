@@ -2,7 +2,7 @@
   <div id="app">
     <div v-if="loading">loading...</div>
 
-    <LayoutDefault v-else-if="!$store.getters.authenticated" />
+    <Layout v-else-if="!$store.getters.authenticated" />
 
     <router-view v-else />
   </div>
@@ -12,11 +12,11 @@
 import { mapActions } from "vuex";
 import { loadSession } from "@/services/auth";
 import { api } from "@/services";
-import LayoutDefault from "@/layout/LayoutDefault";
+import Layout from "@/layout/Layout";
 
 export default {
   components: {
-    LayoutDefault,
+    Layout,
   },
 
   data() {
