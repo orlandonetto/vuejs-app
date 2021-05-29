@@ -8,10 +8,10 @@ export const api = axios.create({
 });
 
 // request
-export async function httpRequest(method, url, payload = null) {
+export async function request(method, endpoint, data) {
   return await new Promise((resolve, reject) => {
     try {
-      api[method](url, payload)
+      api[method](endpoint, data)
         .then((res) => {
           return resolve(res.data);
         })

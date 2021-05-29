@@ -1,13 +1,7 @@
-import { httpRequest } from "./index";
+import { request } from "./index";
 
-export function signIn(payload) {
-  return httpRequest("post", "/endpoint", payload);
-}
+export const signIn = (data) => request("post", "/endpoint", data);
 
-export function signUp(payload) {
-  return httpRequest("post", "/endpoint", payload);
-}
+export const signUp = (data) => request("post", "/endpoint", data);
 
-export function loadSession() {
-  return httpRequest("get", "/endpoint");
-}
+export const loadSession = () => request("get", "/endpoint");
